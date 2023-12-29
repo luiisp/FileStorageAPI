@@ -1,5 +1,5 @@
 // este script pode ser usado para testar o method GET da api, use (node example.js) para executar
-// saiba mais em https://github.com/luiisp/FileStorageApi
+// saiba mais em https://github.com/luiisp/FileStorageAPI
 const host = 'http://localhost:8000'
 const id = '' // (opcional) substitua por o id de um arquivo existente se desejado
 
