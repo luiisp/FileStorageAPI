@@ -1,7 +1,8 @@
 # FileStorage API 1.0
 
-### A file storage é uma API criada com padroes rest que permite com que arquivos sejam armazenados diretamente, ficando disponiveis a qualquer instante para donwload
+![repothumbb](https://github.com/luiisp/FileStorageAPI/assets/115284250/d0915f7d-7bfa-4b80-92d1-1632d139d8ab)
 
+### A file storage é uma API criada com padroes rest que permite com que arquivos sejam armazenados diretamente, ficando disponiveis a qualquer instante para donwload
 Tag this project with a star 🌟
 
 ## Pré-requisitos
