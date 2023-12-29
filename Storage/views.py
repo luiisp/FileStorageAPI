@@ -1,6 +1,10 @@
 from rest_framework import viewsets
 from .models import File
+from rest_framework.decorators import authentication_classes, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
 from .serializers import *
+
 
 class FileViewSet(viewsets.ModelViewSet):
     queryset = File.objects.all()
