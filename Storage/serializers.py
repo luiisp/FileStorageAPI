@@ -15,10 +15,11 @@ class FileListSerializer(serializers.ModelSerializer):
     meta = serializers.SerializerMethodField()
     uploadedAt = serializers.DateTimeField(source='uploaded_at',format="%Y-%m-%dT%H:%M:%S.%fZ", read_only=True)
     fileUrl = serializers.FileField(source='full_file')
+    acessUrl = serializers.SerializerMethodField()
 
     class Meta:
         model = File
-        fields = ('id','title' ,'fileUrl','readSize','uploadedAt','meta')
+        fields = ('id','title','acessUrl' ,'fileUrl','readSize','uploadedAt','meta')
 
     def get_readSize(self, obj):
         path = os.path.join(settings.MEDIA_ROOT, f'{obj.full_file}')
@@ -29,6 +30,8 @@ class FileListSerializer(serializers.ModelSerializer):
             size /= 1024.0
         return f"{size:.2f} {u}"
     
+    def get_acessUrl(self, obj):
+        return f"http://localhost:8000/files/{obj.id}/"
     def get_meta(self, obj):
         path = os.path.join(settings.MEDIA_ROOT, f'{obj.full_file}')
         return {
